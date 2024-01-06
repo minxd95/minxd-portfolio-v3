@@ -20,6 +20,7 @@ export function MobileMenu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
+        <DropdownMenuItem>About</DropdownMenuItem>
         <DropdownMenuItem>Works</DropdownMenuItem>
         <DropdownMenuItem>Article</DropdownMenuItem>
       </DropdownMenuContent>
