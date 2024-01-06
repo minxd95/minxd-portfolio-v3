@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
-      <Button>Click me</Button>
+      <ModeToggle />
     </main>
   );
 }

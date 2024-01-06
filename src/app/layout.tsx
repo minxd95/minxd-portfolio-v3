@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -18,7 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-sans antialiased", fontSans.variable)}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
