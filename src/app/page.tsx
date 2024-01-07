@@ -1,5 +1,6 @@
 import Image from "next/image";
 import me from "@/assets/images/me.jpg";
+import { H2 } from "@/components/typography";
 
 export default function Home() {
   return (
@@ -27,11 +28,25 @@ export default function Home() {
         위해 끊임없이 탐구하고, 함께 일하고 싶은 사람이 되기 위해 항상
         노력하겠습니다.
       </p>
-      <div className="mt-6">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-          Profile
-        </h2>
-        <p></p>
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 sm:gap-8">
+        <div>
+          <H2>Education</H2>
+          <div className="mt-4 flex flex-col gap-2">
+            <span>1995. 서울 출생</span>
+            <span>2008. 길동초등학교 졸업</span>
+            <span>2011. 동신중학교 졸업</span>
+            <span>2014. 한국디지털미디어 고등학교 졸업</span>
+            <span>2022. 상명대학교 경영학부 졸업</span>
+          </div>
+        </div>
+        <div>
+          <H2>Career</H2>
+          <div className="mt-4 flex flex-col gap-2">
+            <span>2021.01. ~ 2021.07. (주)나이비</span>
+            <span>2021.07. ~ 2023.07. (주)플랫타이엑스</span>
+            <span>2023.07. ~ 프리랜서</span>
+          </div>
+        </div>
       </div>
     </div>
   );

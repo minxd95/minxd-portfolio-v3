@@ -15,48 +15,42 @@ export function Header() {
     <header className="w-full h-16 flex justify-between items-center">
       <div className="flex">
         <Link href="/" className="flex items-center gap-1 mr-6">
-          <Music className="w-[1.4rem] h-[1.4rem]" />
           <span className="font-bold text-lg">Minseok Seo</span>
+          <Music className="w-[1.2rem] h-[1.2rem]" />
         </Link>
-        <ul className="sm:flex hidden">
+        <ul className="hidden sm:flex sm:items-center gap-6">
           <li>
-            <Button variant="link" asChild>
-              <Link
-                href="/"
-                className={cn(
-                  "text-sm text-muted-foreground font-light",
-                  pathname === "/" && "text-primary font-normal"
-                )}
-              >
-                About
-              </Link>
-            </Button>
+            <Link
+              href="/"
+              className={cn(
+                "text-sm text-muted-foreground font-light",
+                pathname === "/" && "text-primary font-normal"
+              )}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Button variant="link" asChild>
-              <Link
-                href="/works"
-                className={cn(
-                  "text-sm text-muted-foreground font-light",
-                  pathname === "/works" && "text-primary font-normal"
-                )}
-              >
-                Works
-              </Link>
-            </Button>
+            <Link
+              href="/works"
+              className={cn(
+                "text-sm text-muted-foreground font-light",
+                pathname === "/works" && "text-primary font-normal"
+              )}
+            >
+              Works
+            </Link>
           </li>
           <li>
-            <Button variant="link" asChild>
-              <Link
-                href="/articles"
-                className={cn(
-                  "text-sm text-muted-foreground font-light",
-                  pathname === "/articles" && "text-primary font-normal"
-                )}
-              >
-                Articles
-              </Link>
-            </Button>
+            <Link
+              href="/articles"
+              className={cn(
+                "text-sm text-muted-foreground font-light",
+                pathname === "/articles" && "text-primary font-normal"
+              )}
+            >
+              Articles
+            </Link>
           </li>
         </ul>
       </div>

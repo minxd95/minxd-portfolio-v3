@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-sans antialiased", fontSans.variable)}>
-        <div className="max-w-[48rem] mx-auto my-0 px-4">
+        <div className="max-w-[45rem] mx-auto my-0 px-4">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -28,7 +28,7 @@ export default function RootLayout({
             // disableTransitionOnChange
           >
             <Header />
-            <main className="min-h-screen px-2 sm:px-4">{children}</main>
+            <main className="min-h-screen">{children}</main>
           </ThemeProvider>
         </div>
       </body>
