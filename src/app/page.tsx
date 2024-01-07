@@ -1,6 +1,6 @@
 import Image from "next/image";
 import me from "@/assets/images/me.jpg";
-import { H2 } from "@/components/typography";
+import { H2, List } from "@/components/typography";
 import {
   Accordion,
   AccordionContent,
@@ -104,12 +104,14 @@ export default function Home() {
                       <span className="font-medium">{career.company}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="mt-2 ml-6 list-disc flex flex-col gap-2">
+                  <AccordionContent className="pb-0">
+                    <List className="my-2">
                       {career.descriptions.map((description, idx) => (
-                        <li key={idx.toString()}>{description}</li>
+                        <li key={idx.toString()} className="first:mt-0">
+                          {description}
+                        </li>
                       ))}
-                    </ul>
+                    </List>
                   </AccordionContent>
                 </AccordionItem>
               ))}
