@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { WelcomeAnimation } from "@/components/welcome-animation";
 
 const educations = [
   "1995. 서울 출생",
@@ -48,10 +49,11 @@ const careers = [
 export default function Home() {
   return (
     <div>
+      <WelcomeAnimation />
       <p className="p-4 mt-4 font-light bg-secondary rounded-md text-center leading-relaxed">
         이곳은 웹개발자
-        <span className="font-medium">&nbsp;서민석</span>의 포트폴리오 사이트
-        입니다. 😊
+        <span className="font-medium">&nbsp;서민석</span>의 포트폴리오
+        사이트입니다. 😊
       </p>
       <div className="mt-8 flex flex-col sm:flex-row sm:justify-between sm:items-center">
         <div className="flex flex-col gap-y-3">
