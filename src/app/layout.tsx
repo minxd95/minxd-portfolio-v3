@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={cn("font-sans antialiased", fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="max-w-[45rem] mx-auto my-0 px-4 pt-16 min-h-screen">
+          <main className="max-w-[45rem] mx-auto my-0 px-4 py-16 min-h-screen">
             {children}
           </main>
         </ThemeProvider>

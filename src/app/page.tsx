@@ -62,11 +62,11 @@ export default function Home() {
             Seoul, Korea / Front-End Web Developer
           </span>
         </div>
-        <div className="self-center sm:self-auto relative w-32 h-32 mt-8 sm:mt-0 rounded-full overflow-hidden">
+        <div className="self-center sm:self-auto relative w-28 h-28 mt-8 sm:mt-0 rounded-full overflow-hidden">
           <Image src={me} alt="Minseok Seo" fill className="object-cover" />
         </div>
       </div>
-      <p className="mt-6 leading-loose">
+      <p className="mt-6 leading-loose first-letter:text-2xl">
         경영학과를 졸업하고 진로에 대한 고민 끝에 27살에 웹개발자가 되었습니다.
         주력 분야는 Front-End이며, 배움에 대한 열정으로 실무에서 Back-End,
         Native-App 등등 가리지 않고 다양한 경험을 하였습니다. 더 좋은 개발을
