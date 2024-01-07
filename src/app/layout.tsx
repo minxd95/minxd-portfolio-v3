@@ -20,17 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-sans antialiased", fontSans.variable)}>
-        <div className="max-w-[45rem] mx-auto my-0 px-4">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            // disableTransitionOnChange
-          >
-            <Header />
-            <main className="min-h-screen">{children}</main>
-          </ThemeProvider>
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <main className="max-w-[45rem] mx-auto my-0 px-4 pt-16 min-h-screen">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
