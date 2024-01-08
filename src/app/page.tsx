@@ -25,16 +25,16 @@ import { PageDescription } from "@/components/page-description";
 import { GITHUB_URL, INSTAGRAM_URL, PROJECTS_URL } from "@/constants";
 
 const educations = [
-  "2008.03. 길동초등학교 졸업",
-  "2011.03. 동신중학교 졸업",
-  "2014.03. 한국디지털미디어 고등학교 졸업",
+  "2008.02. 길동초등학교 졸업",
+  "2011.02. 동신중학교 졸업",
+  "2014.02. 한국디지털미디어 고등학교 졸업",
   "2021.08. 상명대학교 경영학부 졸업",
 ];
 
 const careers = [
   {
     company: "(주)나이비",
-    period: "2021.01. ~ 2021.07.",
+    period: "2021.01. ~ 2021.06.",
     descriptions: [
       "지역/날씨별 플레이리스트 추천 기능 (BE)",
       "웹소켓을 이용한 Direct Message 기능 (FE/BE)",
