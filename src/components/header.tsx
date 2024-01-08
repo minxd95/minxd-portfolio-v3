@@ -2,6 +2,7 @@
 
 import { MobileMenu } from "@/components/mobile-menu";
 import { ModeToggle } from "@/components/mode-toggle";
+import { PROJECTS_URL } from "@/constants";
 import { cn } from "@/lib/utils";
 import { Music4 } from "lucide-react";
 import Link from "next/link";
@@ -33,7 +34,7 @@ export function Header() {
             <li>
               <Link
                 target="_blank"
-                href="https://minxd.notion.site/Projects-e6bd669481a8487e81fa20c88e98ce9a?pvs=4"
+                href={PROJECTS_URL}
                 className={cn(
                   "text-sm text-muted-foreground font-light",
                   pathname === "/projects" && "text-primary font-normal"

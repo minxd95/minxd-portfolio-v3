@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import { PROJECTS_URL } from "@/constants";
 
 export function MobileMenu() {
   return (
@@ -25,10 +26,7 @@ export function MobileMenu() {
           <Link href="/">Home</Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Link
-            target="_blank"
-            href="https://minxd.notion.site/Projects-e6bd669481a8487e81fa20c88e98ce9a?pvs=4"
-          >
+          <Link target="_blank" href={PROJECTS_URL}>
             Projects
           </Link>
         </DropdownMenuItem>

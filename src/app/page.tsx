@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { PageDescription } from "@/components/page-description";
+import { GITHUB_URL, INSTAGRAM_URL, PROJECTS_URL } from "@/constants";
 
 const educations = [
   "2008.03. 길동초등학교 졸업",
@@ -111,7 +112,7 @@ export default function Home() {
             className="w-10 h-10 p-0 flex justify-center items-center"
             asChild
           >
-            <Link href="https://www.instagram.com/smin_stone_/" target="_blank">
+            <Link href={INSTAGRAM_URL} target="_blank">
               <Instagram className="w-5 h-5" />
             </Link>
           </Button>
@@ -120,17 +121,14 @@ export default function Home() {
             className="w-10 h-10 p-0 flex justify-center items-center"
             asChild
           >
-            <Link href="https://github.com/minxd95" target="_blank">
+            <Link href={GITHUB_URL} target="_blank">
               <Github className="w-5 h-5" />
             </Link>
           </Button>
         </div>
         <div className="flex gap-2">
           <Button variant="secondary" asChild>
-            <Link
-              target="_blank"
-              href="https://minxd.notion.site/Projects-e6bd669481a8487e81fa20c88e98ce9a?pvs=4"
-            >
+            <Link target="_blank" href={PROJECTS_URL}>
               프로젝트 구경하기
             </Link>
           </Button>
@@ -153,7 +151,7 @@ export default function Home() {
             <span>경력 📝</span>
             <Link
               target="_blank"
-              href="https://file.notion.so/f/f/7e6cf531-055c-41c3-98cb-b8475537a9bd/c942ea70-dfb1-4253-a815-a0015092c0c8/%E1%84%89%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8_%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%A5.pdf?id=b21c7775-fa1a-4a87-bbbd-a17774609e34&table=block&spaceId=7e6cf531-055c-41c3-98cb-b8475537a9bd&expirationTimestamp=1704801600000&signature=o2e70ECnqfit_ajsrdgDGu1aDP4DcXXt3TzhaFVLXgg&downloadName=%E1%84%89%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8+%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%A5.pdf"
+              href="/resume.pdf"
               className="flex mt-4 text-sm font-light justify-end items-center gap-1"
             >
               <span>상세 경력 기술서 보러가기</span>

@@ -76,7 +76,8 @@ interface ContactsProps {
 function Contacts({ isDesktop = false }: ContactsProps) {
   const { toast } = useToast();
 
-  const phoneNumber = "+82-10-2441-6661";
+  const phoneNumber = "010-2441-6661";
+  const phoneNumberForCopy = "01024416661";
   const emailAddress = "newobj95@gmail.com";
 
   return (
@@ -95,7 +96,7 @@ function Contacts({ isDesktop = false }: ContactsProps) {
           className="px-3"
           onClick={async () => {
             try {
-              await window.navigator.clipboard.writeText(phoneNumber);
+              await window.navigator.clipboard.writeText(phoneNumberForCopy);
               toast({
                 description: "휴대폰번호 복사 성공",
               });
