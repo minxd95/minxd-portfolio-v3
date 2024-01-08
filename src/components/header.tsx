@@ -12,7 +12,7 @@ export function Header() {
 
   return (
     <header className="z-10 fixed w-full h-16">
-      <div className="bg-background max-w-[45rem] h-full px-4 flex justify-between items-center my-0 mx-auto">
+      <div className="bg-background max-w-[40rem] h-full px-4 flex justify-between items-center my-0 mx-auto">
         <div className="flex">
           <Link href="/" className="flex items-center gap-1 mr-6">
             <span className="font-bold text-lg">Minseok Seo</span>
@@ -32,24 +32,13 @@ export function Header() {
             </li>
             <li>
               <Link
-                href="/works"
+                href="/projects"
                 className={cn(
                   "text-sm text-muted-foreground font-light",
-                  pathname === "/works" && "text-primary font-normal"
+                  pathname === "/projects" && "text-primary font-normal"
                 )}
               >
-                Works
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/articles"
-                className={cn(
-                  "text-sm text-muted-foreground font-light",
-                  pathname === "/articles" && "text-primary font-normal"
-                )}
-              >
-                Articles
+                Projects
               </Link>
             </li>
           </ul>
