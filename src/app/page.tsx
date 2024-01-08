@@ -25,9 +25,7 @@ import { PageDescription } from "@/components/page-description";
 import { GITHUB_URL, INSTAGRAM_URL, PROJECTS_URL } from "@/constants";
 
 const educations = [
-  "2008.02. 길동초등학교 졸업",
-  "2011.02. 동신중학교 졸업",
-  "2014.02. 한국디지털미디어 고등학교 졸업",
+  "2014.02. 한국디지털미디어고등학교 졸업",
   "2021.08. 상명대학교 경영학부 졸업",
 ];
 
@@ -139,11 +137,14 @@ export default function Home() {
         <div>
           <H2>학력 🎓</H2>
           <div className="mt-2 flex flex-col">
-            {educations.map((education, idx) => (
-              <span key={idx.toString()} className="py-2">
-                {education}
-              </span>
-            ))}
+            {educations
+              .slice(0)
+              .reverse()
+              .map((education, idx) => (
+                <span key={idx.toString()} className="py-2">
+                  {education}
+                </span>
+              ))}
           </div>
         </div>
         <div>
