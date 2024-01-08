@@ -3,7 +3,7 @@
 import { MobileMenu } from "@/components/mobile-menu";
 import { ModeToggle } from "@/components/mode-toggle";
 import { cn } from "@/lib/utils";
-import { Music } from "lucide-react";
+import { Music4 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,7 +16,7 @@ export function Header() {
         <div className="flex">
           <Link href="/" className="flex items-center gap-1 mr-6">
             <span className="font-bold text-lg">Minseok Seo</span>
-            <Music className="w-[1.2rem] h-[1.2rem]" />
+            <Music4 className="w-[1.2rem] h-[1.2rem]" />
           </Link>
           <ul className="hidden sm:flex sm:items-center gap-6">
             <li>
@@ -27,12 +27,13 @@ export function Header() {
                   pathname === "/" && "text-primary font-normal"
                 )}
               >
-                About
+                Home
               </Link>
             </li>
             <li>
               <Link
-                href="/projects"
+                target="_blank"
+                href="https://minxd.notion.site/Projects-e6bd669481a8487e81fa20c88e98ce9a?pvs=4"
                 className={cn(
                   "text-sm text-muted-foreground font-light",
                   pathname === "/projects" && "text-primary font-normal"

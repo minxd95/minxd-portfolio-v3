@@ -21,6 +21,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { PageDescription } from "@/components/page-description";
 
 const educations = [
   "2008.03. 길동초등학교 졸업",
@@ -81,16 +82,16 @@ export default function Home() {
   return (
     <div>
       <WelcomeAnimation />
-      <p className="p-4 mt-4 font-light bg-secondary rounded-md text-center leading-relaxed">
+      <PageDescription>
         이곳은 웹개발자
         <span className="font-medium">&nbsp;서민석</span>의 포트폴리오
         사이트입니다. 😊
-      </p>
+      </PageDescription>
       <div className="mt-8 flex flex-col sm:flex-row sm:justify-between sm:items-center">
         <div className="flex flex-col gap-y-3">
-          <span className="text-4xl font-bold">서 민석</span>
+          <span className="text-4xl font-bold">서민석</span>
           <span className="font-light">
-            프론트엔드 개발자 / 서울특별시 강동구
+            1995년 10월 출생 / 서울 강동구 거주
           </span>
         </div>
         <div className="self-center sm:self-auto relative w-28 h-28 mt-8 sm:mt-0 rounded-full overflow-hidden">
@@ -98,7 +99,6 @@ export default function Home() {
         </div>
       </div>
       <p className="mt-6 leading-loose first-letter:text-2xl first-letter:font-medium">
-        경영학과를 졸업하고 진로에 대한 고민 끝에 27살에 웹개발자가 되었습니다.
         주력 분야는 Front-End이며, 배움에 대한 열정으로 실무에서 Back-End,
         Native-App 등등 가리지 않고 다양한 경험을 하였습니다. 더 좋은 개발을
         위해 끊임없이 탐구하고, 함께 일하고 싶은 사람이 되기 위해 항상
@@ -127,14 +127,19 @@ export default function Home() {
         </div>
         <div className="flex gap-2">
           <Button variant="secondary" asChild>
-            <Link href="/projects">프로젝트 구경하기</Link>
+            <Link
+              target="_blank"
+              href="https://minxd.notion.site/Projects-e6bd669481a8487e81fa20c88e98ce9a?pvs=4"
+            >
+              프로젝트 구경하기
+            </Link>
           </Button>
           <ContactMe />
         </div>
       </div>
       <div className="mt-10 flex flex-col gap-8">
         <div>
-          <H2>학력 📝</H2>
+          <H2>학력 🎓</H2>
           <div className="mt-2 flex flex-col">
             {educations.map((education, idx) => (
               <span key={idx.toString()} className="py-2">
@@ -145,7 +150,7 @@ export default function Home() {
         </div>
         <div>
           <H2 className="flex justify-between">
-            <span>경력 🎓</span>
+            <span>경력 📝</span>
             <Link
               target="_blank"
               href="https://file.notion.so/f/f/7e6cf531-055c-41c3-98cb-b8475537a9bd/c942ea70-dfb1-4253-a815-a0015092c0c8/%E1%84%89%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8_%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%A5.pdf?id=b21c7775-fa1a-4a87-bbbd-a17774609e34&table=block&spaceId=7e6cf531-055c-41c3-98cb-b8475537a9bd&expirationTimestamp=1704801600000&signature=o2e70ECnqfit_ajsrdgDGu1aDP4DcXXt3TzhaFVLXgg&downloadName=%E1%84%89%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8+%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%A5.pdf"

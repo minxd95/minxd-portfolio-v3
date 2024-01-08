@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export function MobileMenu() {
   return (
@@ -20,9 +21,17 @@ export function MobileMenu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem>About</DropdownMenuItem>
-        <DropdownMenuItem>Works</DropdownMenuItem>
-        <DropdownMenuItem>Article</DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/">Home</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link
+            target="_blank"
+            href="https://minxd.notion.site/Projects-e6bd669481a8487e81fa20c88e98ce9a?pvs=4"
+          >
+            Projects
+          </Link>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
