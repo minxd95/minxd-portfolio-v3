@@ -9,9 +9,18 @@ import {
 } from "@/components/ui/accordion";
 import { WelcomeAnimation } from "@/components/welcome-animation";
 import { Button } from "@/components/ui/button";
-import { Github, Instagram } from "lucide-react";
+import { ExternalLink, Github, Instagram } from "lucide-react";
 import Link from "next/link";
 import { ContactMe } from "@/components/contact-me";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 
 const educations = [
   "2008.03. 길동초등학교 졸업",
@@ -45,9 +54,28 @@ const careers = [
   {
     company: "프리랜서",
     period: "2023.07. ~ 현재",
-    descriptions: ["더프라이빗 Mobile App"],
+    descriptions: ["더프라이빗 Mobile App (FE)"],
   },
 ];
+
+const techStacks = {
+  frontend: [
+    "TypeScript",
+    "React",
+    "NextJS",
+    "Recoil",
+    "styled-components",
+    "Emotion",
+    "tailwindCSS",
+    "React-Native",
+    "Playwright",
+  ],
+  backend: ["NodeJS", "Express", "Sequelize", "NestJS"],
+  database: ["MySQL", "MariaDB"],
+  versionControl: ["Github"],
+  cloud: ["Firebase", "Vercel", "AWS"],
+  tools: ["Slack", "Figma", "AdobeXD"],
+};
 
 export default function Home() {
   return (
@@ -106,10 +134,7 @@ export default function Home() {
       </div>
       <div className="mt-10 flex flex-col gap-8">
         <div>
-          <H2>기술 스택</H2>
-        </div>
-        <div>
-          <H2>학력 🎓</H2>
+          <H2>학력 📝</H2>
           <div className="mt-2 flex flex-col">
             {educations.map((education, idx) => (
               <span key={idx.toString()} className="py-2">
@@ -119,12 +144,18 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <H2>경력 📝</H2>
-          <Accordion
-            type="multiple"
-            defaultValue={["0", "1", "2"]}
-            className="w-full mt-2"
-          >
+          <H2 className="flex justify-between">
+            <span>경력 🎓</span>
+            <Link
+              target="_blank"
+              href="https://file.notion.so/f/f/7e6cf531-055c-41c3-98cb-b8475537a9bd/c942ea70-dfb1-4253-a815-a0015092c0c8/%E1%84%89%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8_%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%A5.pdf?id=b21c7775-fa1a-4a87-bbbd-a17774609e34&table=block&spaceId=7e6cf531-055c-41c3-98cb-b8475537a9bd&expirationTimestamp=1704801600000&signature=o2e70ECnqfit_ajsrdgDGu1aDP4DcXXt3TzhaFVLXgg&downloadName=%E1%84%89%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%A8+%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%A8%E1%84%89%E1%85%A5.pdf"
+              className="flex mt-4 text-sm font-light justify-end items-center gap-1"
+            >
+              <span>상세 경력 기술서 보러가기</span>
+              <ExternalLink className="w-[1rem] h-[1rem]" />
+            </Link>
+          </H2>
+          <Accordion type="multiple" className="w-full mt-2">
             {careers
               .slice(0)
               .reverse()
@@ -152,6 +183,93 @@ export default function Home() {
                 </AccordionItem>
               ))}
           </Accordion>
+        </div>
+        <div>
+          <H2>기술 스택 🛠️</H2>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-32">분야</TableHead>
+                <TableHead>기술</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell>프론트엔드</TableCell>
+                <TableCell className="flex flex-wrap gap-1">
+                  {techStacks.frontend.map((tech, idx) => (
+                    <Badge key={idx.toString()} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>백엔드</TableCell>
+                <TableCell className="flex flex-wrap gap-1">
+                  {techStacks.backend.map((tech, idx) => (
+                    <Badge key={idx.toString()} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>데이터베이스</TableCell>
+                <TableCell className="flex flex-wrap gap-1">
+                  {techStacks.database.map((tech, idx) => (
+                    <Badge key={idx.toString()} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>클라우드 & 배포</TableCell>
+                <TableCell className="flex flex-wrap gap-1">
+                  {techStacks.cloud.map((tech, idx) => (
+                    <Badge key={idx.toString()} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>버전관리</TableCell>
+                <TableCell className="flex flex-wrap gap-1">
+                  {techStacks.versionControl.map((tech, idx) => (
+                    <Badge key={idx.toString()} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>도구</TableCell>
+                <TableCell className="flex flex-wrap gap-1">
+                  {techStacks.tools.map((tech, idx) => (
+                    <Badge key={idx.toString()} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+        <div>
+          <H2>저는 이렇게 일해요 😁</H2>
+          <List>
+            <li>
+              프로젝트를 대충 마치기보다, 지속 가능한 프로젝트로 설계하는 것을
+              중요시합니다.
+            </li>
+            <li>
+              발생한 문제를 단순히 해결하기보다, 근본적인 원인을 파악하여
+              해결합니다.
+            </li>
+            <li>모든 인연을 소중하게 생각하며 항상 최선을 다합니다.</li>
+          </List>
         </div>
       </div>
     </div>

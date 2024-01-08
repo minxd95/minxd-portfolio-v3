@@ -37,7 +37,7 @@ export function ContactMe() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-xs">
         <DialogHeader>
-          <DialogTitle>연락하기</DialogTitle>
+          <DialogTitle>연락처</DialogTitle>
         </DialogHeader>
         <Contacts isDesktop />
         <DialogFooter>
@@ -56,7 +56,7 @@ export function ContactMe() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>연락하기</DrawerTitle>
+          <DrawerTitle>연락처</DrawerTitle>
         </DrawerHeader>
         <Contacts />
         <DrawerFooter>
