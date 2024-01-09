@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={cn("font-sans antialiased", fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="max-w-[40rem] mx-auto my-0 px-4 py-16 min-h-[calc(100vh-4rem)]">
+          <main className="max-w-[40rem] mx-auto my-0 px-4 pt-16 pb-24 min-h-[calc(100vh-4rem)]">
             {children}
           </main>
           <Footer />
