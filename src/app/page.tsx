@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "@/assets/images/me.jpeg";
+import me from "@/assets/images/me.png";
 import { H2, List } from "@/components/typography";
 import {
   Accordion,
