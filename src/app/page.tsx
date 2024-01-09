@@ -126,8 +126,9 @@ export default function Home() {
         </div>
         <div className="flex gap-2">
           <Button variant="secondary" asChild>
-            <Link target="_blank" href={PROJECTS_URL}>
-              프로젝트 구경하기
+            <Link target="_blank" href={PROJECTS_URL} className="flex gap-1">
+              <span>프로젝트 목록</span>
+              <ExternalLink className="w-[1rem] h-[1rem]" />
             </Link>
           </Button>
           <ContactMe />
@@ -190,10 +191,10 @@ export default function Home() {
         </div>
         <div>
           <H2>기술 스택 🛠️</H2>
-          <Table>
+          <Table className="text-xs sm:text-sm [&_td]:p-2 [&_th]:p-2 sm:[&_td]:p-4 sm:[&_th]:p-4">
             <TableHeader>
               <TableRow>
-                <TableHead className="w-32">분야</TableHead>
+                <TableHead className="w-24 sm:w-32">분야</TableHead>
                 <TableHead>기술</TableHead>
               </TableRow>
             </TableHeader>
