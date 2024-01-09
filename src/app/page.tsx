@@ -134,7 +134,7 @@ export default function Home() {
           <ContactMe />
         </div>
       </div>
-      <div className="mt-10 flex flex-col gap-8">
+      <div className="mt-14 flex flex-col gap-14">
         <div>
           <H2>학력 🎓</H2>
           <div className="mt-2 flex flex-col">
