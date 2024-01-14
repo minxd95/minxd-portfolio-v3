@@ -32,6 +32,7 @@ const educations = [
 const careers = [
   {
     company: "(주)나이비",
+    department: "개발팀 인턴",
     period: "2021.01. ~ 2021.06.",
     descriptions: [
       "심심(음성채팅 랜덤 매칭) 기능 개발",
@@ -44,6 +45,7 @@ const careers = [
   },
   {
     company: "(주)플랫타이엑스",
+    department: "프론트엔드 개발팀",
     period: "2021.07. ~ 2023.07.",
     descriptions: [
       "회사 홈페이지 개발",
@@ -56,6 +58,7 @@ const careers = [
   },
   {
     company: "프리랜서",
+    department: "",
     period: "2023.07. ~ 현재",
     descriptions: ["더프라이빗 Mobile App 개발"],
   },
@@ -176,7 +179,14 @@ export default function Home() {
                   <AccordionTrigger className="font-normal py-2 rounded-md hover:no-underline">
                     <div className="flex">
                       <span className="w-40 text-left">{career.period}</span>
-                      <span className="font-medium">{career.company}</span>
+                      <div className="flex-1 flex flex-col sm:flex-row items-start">
+                        <span className="font-medium sm:mr-2">
+                          {career.company}
+                        </span>
+                        <span className="font-light text-sm sm:translate-y-[0.15rem]">
+                          {career.department}
+                        </span>
+                      </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pb-0">
