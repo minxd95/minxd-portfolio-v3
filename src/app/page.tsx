@@ -58,9 +58,20 @@ const careers = [
   },
   {
     company: "프리랜서",
-    department: "",
-    period: "2023.07. ~ 현재",
+    department: "Mobile App 개발",
+    period: "2023.07. ~ 2023.09.",
     descriptions: ["더프라이빗 Mobile App 개발"],
+  },
+  {
+    company: "(주)씨브이쓰리",
+    department: "개발팀",
+    period: "2024.02. ~ 현재",
+    descriptions: [
+      "홈쇼핑 데이터랩 개발",
+      "애즈순 유지보수",
+      "라방바 데이터랩 유지보수",
+      "SKPlanet 오퍼월 광고 어드민 서비스",
+    ],
   },
 ];
 
