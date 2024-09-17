@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "@/assets/images/me.png";
+import me from "@/assets/images/me.jpg";
 import { H2, List } from "@/components/typography";
 import {
   Accordion,
@@ -115,9 +115,10 @@ export default function Home() {
         </div>
       </div>
       <p className="mt-6 leading-loose first-letter:text-2xl first-letter:font-medium">
-        주력 분야는 Front-End이며, 배움에 대한 열정으로 실무에서 Back-End,
-        Native-App 등등 가리지 않고 다양한 경험을 하였습니다. 더 좋은 개발을
-        위해 끊임없이 탐구하고, 함께 일하고 싶은 사람이 되기 위해 항상
+        안녕하세요. 일을 사랑하고, 음악을 사랑하며, 달리기를 사랑하는 개발자
+        서민석 입니다. 주력 분야는 Front-End이며, 배움에 대한 열정으로 실무에서
+        Back-End, Native-App 등등 가리지 않고 다양한 경험을 하였습니다. 더 좋은
+        개발을 위해 끊임없이 탐구하고, 함께 일하고 싶은 사람이 되기 위해 항상
         노력하겠습니다.
       </p>
       <div className="flex justify-between items-center mt-6">
