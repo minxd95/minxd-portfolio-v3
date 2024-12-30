@@ -7,7 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 
-const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans = FontSans({ subsets: [], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "웹개발자 서민석",
