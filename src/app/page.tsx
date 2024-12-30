@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "@/assets/images/me.jpg";
+import me from "@/assets/images/me.png";
 import { H2, List } from "@/components/typography";
 import {
   Accordion,
@@ -48,19 +48,14 @@ const careers = [
     department: "프론트엔드 개발팀",
     period: "2021.07. ~ 2023.07.",
     descriptions: [
-      "회사 홈페이지 개발",
+      "회사소개 홈페이지 개발",
       "가상자산 거래소 어드민 개발",
       "가상자산 거래소 고객센터 개발",
       "가상자산 거래소 PC Version 개발",
       "가상자산 거래소 Mobile Version 개발",
-      "기능개선 및 유지보수",
+      "거래차트 유지보수",
+      "신기능 개발 및 유지보수",
     ],
-  },
-  {
-    company: "프리랜서",
-    department: "Mobile App 개발",
-    period: "2023.07. ~ 2023.09.",
-    descriptions: ["더프라이빗 Mobile App 개발"],
   },
   {
     company: "(주)씨브이쓰리",
@@ -70,7 +65,8 @@ const careers = [
       "홈쇼핑 데이터랩 개발",
       "애즈순 유지보수",
       "라방바 데이터랩 유지보수",
-      "SKPlanet 오퍼월 광고 어드민 서비스",
+      "SKPlanet 오퍼월 광고 어드민 서비스 FE설계 및 개발",
+      "애즈순 리뉴얼 (ing)",
     ],
   },
 ];
@@ -81,6 +77,7 @@ const techStacks = {
     "React",
     "NextJS",
     "Recoil",
+    "Jotai",
     "styled-components",
     "Emotion",
     "tailwindCSS",
@@ -115,11 +112,11 @@ export default function Home() {
         </div>
       </div>
       <p className="mt-6 leading-loose first-letter:text-2xl first-letter:font-medium">
-        안녕하세요. 일을 사랑하고, 음악을 사랑하며, 달리기를 사랑하는 개발자
-        서민석입니다. 주력 분야는 Front-End이며, 배움에 대한 열정으로 실무에서
-        Back-End, Native-App 등 가리지 않고 다양한 경험을 하였습니다. 더 좋은
-        개발을 위해 끊임없이 탐구하고, 함께 일하고 싶은 사람이 되기 위해 항상
-        노력하겠습니다.
+        안녕하세요. 웹 개발자 서민석입니다. 주력 분야는 프론트엔드이며, 배움에
+        대한 열정으로 백엔드와 네이티브 앱 개발 등 다양한 분야를 경험해왔습니다.
+        조직과 개인의 발전을 최우선으로 삼고, 더 나은 개발을 위해 끊임없이
+        탐구하며 성장하고자 합니다. 또한, 함께 일하고 싶은 동료가 되기 위해
+        끊임없이 노력하고 있습니다.
       </p>
       <div className="flex justify-between items-center mt-6">
         <div className="flex gap-1">
@@ -178,7 +175,11 @@ export default function Home() {
               <ExternalLink className="w-[1rem] h-[1rem]" />
             </Link>
           </H2>
-          <Accordion type="multiple" className="w-full mt-2">
+          <Accordion
+            type="multiple"
+            className="w-full mt-2"
+            defaultValue={["0", "1", "2"]}
+          >
             {careers
               .slice(0)
               .reverse()
