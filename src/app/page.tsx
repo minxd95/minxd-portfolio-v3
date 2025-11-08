@@ -62,9 +62,11 @@ const careers = [
     department: "개발팀",
     period: "2024.02. ~ 현재",
     descriptions: [
-      "애즈순 리뉴얼 (ing)",
+      "에러추적시스템(Sentry) 도입",
+      "통합/E2E 테스팅 도입",
+      "(신)애즈순 FE 설계 및 개발",
       "홈쇼핑 데이터랩 개발",
-      "애즈순 유지보수",
+      "(구)애즈순 유지보수",
       "라방바 데이터랩 유지보수",
       "SKPlanet 오퍼월 광고 어드민 서비스 FE설계 및 개발",
     ],
@@ -108,7 +110,12 @@ export default function Home() {
           </span>
         </div>
         <div className="self-center sm:self-auto relative w-28 h-28 mt-8 sm:mt-0 rounded-full overflow-hidden">
-          <Image src={me} alt="Minseok Seo" fill className="object-cover" />
+          <Image
+            src={me}
+            alt="Minseok Seo"
+            fill
+            className="object-cover scale-125 -translate-y-2"
+          />
         </div>
       </div>
       <p className="mt-6 leading-loose first-letter:text-2xl first-letter:font-medium">
@@ -125,9 +132,9 @@ export default function Home() {
             className="w-10 h-10 p-0 flex justify-center items-center"
             asChild
           >
-            <Link href={INSTAGRAM_URL} target="_blank">
+            {/* <Link href={INSTAGRAM_URL} target="_blank">
               <Instagram className="w-5 h-5" />
-            </Link>
+            </Link> */}
           </Button>
           <Button
             variant="ghost"
