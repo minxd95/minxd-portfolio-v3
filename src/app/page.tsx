@@ -58,6 +58,12 @@ const careers = [
     ],
   },
   {
+    company: "더프라이빗",
+    department: "개발팀",
+    period: "2023.08. ~ 2023.10.",
+    descriptions: ["파인다이닝 소셜 앱 '더프라이빗' 개발"],
+  },
+  {
     company: "(주)씨브이쓰리",
     department: "개발팀",
     period: "2024.02. ~ 현재",
